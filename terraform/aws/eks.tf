@@ -138,6 +138,7 @@ resource aws_eks_cluster "eks_cluster" {
     git_repo             = "terragoat"
     yor_trace            = "7fa14261-c18d-4fa2-aec4-746f6e64d2d3"
   }
+  enabled_cluster_log_types = ["api", "audit", "authenticator", "controllerManager", "scheduler"]
 }
 
 output "endpoint" {
